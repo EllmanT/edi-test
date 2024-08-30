@@ -732,7 +732,9 @@ LARGEDOLLAR=0
         try {
             // Initializes the Google APIs client library and sets up the authentication using service account credentials.
             const auth = new google.auth.GoogleAuth({
-                keyFile: "./credentials.json", // Path to your service account key file.
+                // keyFile: "./credentials.json", // Path to your service account key file.
+                   //testing updating the credentials pathhh
+    keyFile: process.env.GOOGLE_APP_CREDENTIALS_PATH, //stored in render
                 scopes: ["https://www.googleapis.com/auth/spreadsheets"], // Scope for Google Sheets API.
             });
 
